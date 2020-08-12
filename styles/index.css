@@ -6,13 +6,6 @@ body {
   min-width: 320px;
 }
 
-/* Start purging... */
-@tailwind components;
-
-.container {
-  max-width: 1600px;
-}
-
 .section > div {
   /* border: 1px solid green; */
   height: calc(100vh - 110px) !important;
@@ -20,12 +13,16 @@ body {
   margin-top: 110px;
 }
 
+/* Start purging... */
+@tailwind components;
+
+.container {
+  max-width: 1600px;
+}
+
 /* Stop purging. */
 
 /* Write you own custom component styles here */
-.btn-blue {
-  @apply bg-blue-100 text-white font-bold py-1 px-4 rounded;
-}
 
 /* Start purging... */
 @tailwind utilities;
