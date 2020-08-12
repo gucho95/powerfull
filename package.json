@@ -7,7 +7,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.17",
     "next": "latest",
+    "next-i18next": "^6.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
