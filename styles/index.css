@@ -13,6 +13,13 @@ body {
   max-width: 1600px;
 }
 
+.section > div {
+  /* border: 1px solid green; */
+  height: calc(100vh - 110px) !important;
+  display: flex;
+  margin-top: 110px;
+}
+
 /* Stop purging. */
 
 /* Write you own custom component styles here */

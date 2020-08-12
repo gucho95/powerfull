@@ -3,12 +3,6 @@ header {
   /* border: 1px solid red; */
 }
 
-.section > div {
-  /* border: 1px solid green; */
-  height: calc(100vh - 110px) !important;
-  display: flex;
-  margin-top: 110px;
-}
 .section > div > div {
   /* border: 1px solid red; */
 }
