@@ -1,8 +1,6 @@
-import { useTranslation } from "../i18n";
+import { withTranslation } from "../i18n";
 
-const Privacy = () => {
-  const [t, i18n] = useTranslation();
-  console.log("i18nLanguage", i18n.language);
+const Privacy = ({ t, i18n }) => {
   return <div className='bg-white'>privacy</div>;
 };
 
