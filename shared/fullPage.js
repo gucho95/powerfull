@@ -13,10 +13,7 @@ export default function FullPage({ sections }) {
         <ReactFullpage.Wrapper>
           {sections.map((section, key) => (
             <div className='section' key={key}>
-              <div
-                className='h-full pt-32  border-2 border-yellow-700 flex items-center  justify-center'
-                children={section}
-              />
+              <div className='flex justify-center items-center py-4 w-full' children={section} />
             </div>
           ))}
         </ReactFullpage.Wrapper>
