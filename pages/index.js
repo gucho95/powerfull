@@ -7,11 +7,19 @@ import HowToUse from "shared/sections/howToUse";
 import Plans from "shared/sections/plans";
 import About from "shared/sections/about";
 
-export default function IndexPage() {
+import { withTranslation } from "../i18n";
+
+const IndexPage = () => {
   return (
     <div>
       <Header />
       <FullPage sections={[<Products />, <HowToUse />, <Plans />, <About />]} />
     </div>
   );
-}
+};
+
+IndexPage.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
+export default withTranslation("common")(IndexPage);
