@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Header from "shared/header";
 import FullPage from "shared/fullPage";
 
@@ -12,6 +13,9 @@ import { withTranslation } from "../i18n";
 const IndexPage = () => {
   return (
     <div>
+      <Head>
+        <title>Powerfull | Homepage</title>
+      </Head>
       <Header />
       <FullPage sections={[<Products />, <HowToUse />, <Plans />, <About />]} />
     </div>
