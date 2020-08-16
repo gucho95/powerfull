@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { withTranslation } from "../i18n";
+import { withTranslation } from "../../i18n";
 
 const Privacy = ({ t, i18n }) => {
   return (
@@ -13,7 +13,7 @@ const Privacy = ({ t, i18n }) => {
 };
 
 Privacy.getInitialProps = async () => ({
-  namespacesRequired: ["common"],
+  namespacesRequired: ["common", "sections", "footer"],
 });
 
 export default withTranslation("common")(Privacy);

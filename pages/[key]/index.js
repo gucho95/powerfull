@@ -7,8 +7,7 @@ import Products from "shared/sections/products";
 import HowToUse from "shared/sections/howToUse";
 import Plans from "shared/sections/plans";
 import About from "shared/sections/about";
-
-import { withTranslation } from "../i18n";
+import { withTranslation } from "i18n";
 
 const IndexPage = () => {
   return (
@@ -23,7 +22,7 @@ const IndexPage = () => {
 };
 
 IndexPage.getInitialProps = async () => ({
-  namespacesRequired: ["common"],
+  namespacesRequired: ["common", "header", "footer", "sections"],
 });
 
 export default withTranslation("common")(IndexPage);

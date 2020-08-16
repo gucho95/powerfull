@@ -13,12 +13,23 @@ body {
   margin-top: 110px;
 }
 
-/* Start purging... */
-@tailwind components;
+/*Overrides must match specificity of pre-loaded styles!*/
+/*The simplest way to get the selector is with devtools*/
+#fp-nav ul li:hover a.active span,
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span {
+  @apply bg-primary-light;
+  transition: all 0.5s linear;
+}
 
 .container {
-  max-width: 1600px;
+  @apply flex justify-center flex-col;
+  border: 1px solid red;
 }
+
+/* Start purging... */
+@tailwind components;
 
 /* Stop purging. */
 

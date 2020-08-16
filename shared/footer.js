@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { ImageLink } from "shared/link";
+import LinkTo from "shared/link";
 import { socialPages } from "constants/social";
-import { useTranslation } from "../i18n";
+import { withTranslation } from "../i18n";
 
-export default function Footer() {
-  const { t } = useTranslation();
+const Footer = ({ t }) => {
   return (
-    <footer className='flex justify-center'>
+    <footer className='w-full flex justify-center'>
       <div className='container'>
         <div className='lg:flex lg:flex-row lg:justify-around xs:items-center  xs:flex-col'>
           <div className='flex items-center xs:justify-center'>
@@ -30,7 +29,11 @@ export default function Footer() {
 
           <div className='flex items-center xs:justify-center'>
             {socialPages.map(({ href, src }) => (
-              <ImageLink href={href} src={src} key={src} />
+              <LinkTo.External
+                href={href}
+                key={src}
+                children={<img src={src} key={href} className='w-16 xs:w-12 mx-2' />}
+              />
             ))}
           </div>
         </div>
@@ -49,4 +52,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default withTranslation("footer")(Footer);

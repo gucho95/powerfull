@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Header from "shared/header";
 import Footer from "shared/footer";
-import { withTranslation } from "../i18n";
+import { withTranslation } from "../../i18n";
 
 const Partners = ({}) => {
   return (
@@ -16,7 +16,7 @@ const Partners = ({}) => {
 };
 
 Partners.getInitialProps = async () => ({
-  namespacesRequired: ["common"],
+  namespacesRequired: ["common", "sections", "footer"],
 });
 
 export default withTranslation("common")(Partners);

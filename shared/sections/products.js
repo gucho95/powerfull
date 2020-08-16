@@ -1,13 +1,12 @@
-import { useTranslation } from "../../i18n";
+import { withTranslation } from "../../i18n";
 import Heading from "shared/heading";
 import { products } from "constants/products";
 
-export default function Products() {
-  const { t, i18n } = useTranslation();
+const Products = ({ t, i18n }) => {
   return (
     <section>
       <div className='container'>
-        <Heading t_key={"We make Armenia Powerfull"} />
+        <Heading text={t("hm_sec1_title")} />
         <div className='flex justify-around'>
           {products.map((item, key) => (
             <div
@@ -19,9 +18,11 @@ export default function Products() {
           ))}
         </div>
         <div className='mt-8'>
-          <Heading t_key={"Currently at more than 50 points in Yerevan"} border={false} />
+          <Heading text={t("hm_sec1_desc")} border={false} />
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default withTranslation("sections")(Products);
