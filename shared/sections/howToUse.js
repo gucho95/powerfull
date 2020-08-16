@@ -19,7 +19,7 @@ const HowToUse = ({ t, i18n }) => {
                 <h3 children={t(item.title_key)} className='font-bold text-2xl text-primary-dark' />
               </div>
               <div
-                className='flex flex-col justify-center items-center bg-primary-blue h-200px px-2 font-bold text-sm w-full text-justify'
+                className='flex flex-col justify-center items-center bg-primary-blue h-200px px-2 text-sm w-full text-justify'
                 children={t(item.desc_key)}
               />
             </div>

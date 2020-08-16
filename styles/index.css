@@ -1,6 +1,5 @@
 @tailwind base;
 
-/* Write your own custom base styles here */
 body {
   @apply bg-primary-dark text-primary-light;
   min-width: 320px;
@@ -28,18 +27,7 @@ body {
 }
 
 .container {
-  @apply flex justify-center flex-col;
 }
 
-/* Start purging... */
 @tailwind components;
-
-/* Stop purging. */
-
-/* Write you own custom component styles here */
-
-/* Start purging... */
 @tailwind utilities;
-/* Stop purging. */
-
-/* Your own custom utilities */

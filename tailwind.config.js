@@ -1,16 +1,20 @@
+const { screens } = require("tailwindcss/defaultTheme");
 module.exports = {
   purge: ["./shared/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
-
   theme: {
     container: {
-      "max-width": "1600px",
+      center: true,
+      padding: {
+        xs: "1rem",
+      },
+      maxWidth: {
+        xs: "100%",
+        xl: "1600px",
+      },
     },
     screens: {
       xs: "0px",
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
+      ...screens,
     },
     extend: {
       zIndex: {
@@ -55,5 +59,27 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        ".container": {
+          "@screen xs": {
+            maxWidth: "100%",
+          },
+          "@screen sm": {
+            maxWidth: "640px",
+          },
+          "@screen md": {
+            maxWidth: "768px",
+          },
+          "@screen lg": {
+            maxWidth: "1024px",
+          },
+          "@screen xl": {
+            maxWidth: "1600px",
+          },
+        },
+      });
+    },
+  ],
 };
