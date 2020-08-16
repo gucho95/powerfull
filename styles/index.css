@@ -4,6 +4,7 @@
 body {
   @apply bg-primary-dark text-primary-light;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 .section > div {
@@ -15,6 +16,9 @@ body {
 
 /*Overrides must match specificity of pre-loaded styles!*/
 /*The simplest way to get the selector is with devtools*/
+#fp-nav {
+  z-index: 20 !important;
+}
 #fp-nav ul li:hover a.active span,
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li:hover a.active span,
@@ -25,7 +29,6 @@ body {
 
 .container {
   @apply flex justify-center flex-col;
-  border: 1px solid red;
 }
 
 /* Start purging... */

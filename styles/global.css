@@ -1,8 +1,45 @@
-header {
-  /* opacity: 0.2; */
-  /* border: 1px solid red; */
+.flicker-4 {
+  animation: flicker-4 2s ease-in-out infinite both;
 }
 
-.section > div > div {
-  /* border: 1px solid red; */
+.flip-vertical-right {
+  animation: flip-vertical-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.scene {
+  perspective: 760px;
+  height: 384px;
+}
+
+.card {
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  z-index: 10;
+  height: 384px;
+}
+
+.card__face--back {
+  z-index: 20;
+  height: 384px;
+  transform: rotateY(180deg);
+}
+
+.text-pop-up-top {
+  animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }

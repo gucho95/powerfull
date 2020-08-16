@@ -1,32 +1,37 @@
+import { useState } from "react";
 import Link from "next/link";
 import LinkTo from "shared/link";
 import { withTranslation } from "../i18n";
 import { menuItems } from "constants/navbar";
 import { locales } from "constants/locales";
+import Icon from "shared/icons";
 
 const Header = ({ t, i18n }) => {
+  const [menuOpened, setMenuOpened] = useState(false);
   return (
-    <header className='flex justify-center fixed z-50 w-full bg-primary-dark shadow-xl'>
+    <header className='flex justify-center fixed z-40 w-full bg-primary-dark shadow-xl'>
       <div className='container'>
         <nav className='flex items-center justify-between flex-wrap p-6'>
           <div className='flex items-center flex-shrink-0 text-white mr-6'>
-            <LinkTo.Internal href='/' children={<img src={"/assets/logo.png"} className='w-40' />} />
+            <LinkTo.Internal href='/' children={<img src={"/assets/logo.png"} className='w-40 flicker-4' />} />
           </div>
 
-          <div className='block lg:hidden'>
-            <button className='flex items-center px-3 py-2 rounded text-teal-200 hover:text-white hover:border-white'>
-              <svg className='fill-current h-3 w-3' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
-                <title>Menu</title>
-                <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
-              </svg>
-            </button>
+          <div className='block lg:hidden border-red-500 border-2'>
+            <button
+              className='flex items-center px-3 py-2 rounded text-teal-200 hover:text-white hover:border-white'
+              children={Icon.hamburger}
+            />
           </div>
 
-          <div className='w-full block flex-grow lg:flex lg:items-center lg:w-auto'>
+          <div className='w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:static lg:h-auto lg:bg-transparent  sm:fixed sm:h-screen sm:top-0 sm:left-0 bg-primary-dark text-primary-light sm:z-200 sm:pt-8 sm:px-8 lg:px-0 lg:pt-0'>
+            <div className='flex justify-end lg:hidden'>
+              <button className='p-2 rounded border-2 border-transparent hover:border-white' children={Icon.close} />
+            </div>
+
             <div className='text-sm lg:flex-grow'>
-              <ul className='fle  x lg:flex-row sm:flex-col'>
+              <ul className='flex lg:flex-row sm:flex-col sm:items-center'>
                 {menuItems.map((item) => (
-                  <li className='px-4' key={item.t_key}>
+                  <li className='px-4 lg:mt-0 sm:mt-8' key={item.t_key}>
                     <Link href={item.href}>
                       <a children={t(item.t_key)} className='text-xl hover:text-white' />
                     </Link>
@@ -36,7 +41,7 @@ const Header = ({ t, i18n }) => {
             </div>
 
             <div>
-              <ul className='flex'>
+              <ul className='flex sm:text-sm  lg:text-lg justify-center lg:mt-0  sm:mt-4'>
                 {locales.map((item) => (
                   <li key={item.code}>
                     <button

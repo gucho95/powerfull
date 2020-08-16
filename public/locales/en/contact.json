@@ -1,3 +1,10 @@
 {
-  "contact_us": "Contact us"
+  "contact_us": "Contact us",
+  "name_surname": "Name/Surname",
+  "email": "Email",
+  "message": "Message",
+  "submit": "Submit",
+  "username_ph": "Put your username",
+  "email_ph": "Example@gmail.com",
+  "message_ph": "Text Subject"
 }
