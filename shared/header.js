@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "i18n";
 import LinkTo from "shared/link";
 import { withTranslation } from "../i18n";
 import { menuItems } from "constants/navbar";
