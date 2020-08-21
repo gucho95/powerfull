@@ -5,7 +5,6 @@ module.exports = new NextI18Next({
   defaultLanguage: "hy",
   otherLanguages: ["en", "ru"],
   localeSubpaths: {
-    hy: "hy",
     ru: "ru",
     en: "en",
   },

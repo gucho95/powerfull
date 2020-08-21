@@ -3,7 +3,7 @@ import Head from "next/head";
 import Header from "shared/header";
 import Footer from "shared/footer";
 import Heading from "shared/heading";
-import { withTranslation } from "../../i18n";
+import { withTranslation } from "i18n";
 
 const submitForm = (e) => {
   e.preventDefault();

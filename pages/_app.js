@@ -5,6 +5,9 @@ import "../styles/global.css";
 import "../styles/animations/glow.css";
 import "../styles/animations/focus.css";
 import "../styles/animations/tracking.css";
+import "../styles/carousel.css";
+// import Swiper styles
+import "swiper/swiper-bundle.css";
 
 function MyApp({ Component, pageProps }) {
   return (
