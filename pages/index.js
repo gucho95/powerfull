@@ -6,7 +6,7 @@ import Products from "shared/sections/hp-products";
 import HowToUse from "shared/sections/hp-howToUse";
 import Plans from "shared/sections/hp-plans";
 import About from "shared/sections/hp-about";
-import { withTranslation } from "i18n";
+import { withTranslation } from "../i18n";
 
 const IndexPage = () => {
   return (

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { withTranslation } from "i18n";
+import { withTranslation } from "../i18n";
 
 const Privacy = ({ t, i18n }) => {
   return (
