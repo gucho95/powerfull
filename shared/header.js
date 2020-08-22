@@ -13,10 +13,7 @@ const Header = ({ t, i18n }) => {
       <div className='container'>
         <nav className='flex items-center justify-between flex-wrap p-6 w-full'>
           <div className='flex items-center flex-shrink-0 text-white mr-6'>
-            <LinkTo.Internal
-              href='/'
-              children={<img src={"/assets/logo.png"} className='md:w-40  xs:w-32 flicker-4' />}
-            />
+            <LinkTo.Internal href='/' children={<img src={"/assets/logo.png"} className='md:w-40  xs:w-32 ' />} />
           </div>
 
           <div className='block lg:hidden'>

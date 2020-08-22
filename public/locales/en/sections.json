@@ -31,5 +31,30 @@
   "pt_sec3_4_title": "Innovate your business",
   "pt_sec3_4_desc": "Jump on the worldwide innovation channel by joining our network and stand out among your competitors with your innovative solutions.",
   "pt_sec4_title": "Our partners",
-  "pt_sec4_desc": "Call us +374 98 722218 or write us support@powerfull.am to become our partner"
+  "pt_sec4_desc": "Call us +374 98 722218 or write us support@powerfull.am to become our partner",
+
+  "model": "Model",
+  "dimension": "Dimensions",
+  "weight": "Weight",
+  "capacity": "Capacity",
+
+  "pw_01_model": "  Powerfull bank",
+  "pw_01_dimension": "139*69*13.5 mm",
+  "pw_01_weight": "100 g",
+  "pw_01_capacity": "5000 mAh",
+
+  "pw_09_model": "PW09",
+  "pw_09_dimension": "310*164*138 mm",
+  "pw_09_weight": "3500 g",
+  "pw_09_capacity": "9 power banks",
+
+  "pw_12_model": "PW12",
+  "pw_12_dimension": "300*260*170 mm",
+  "pw_12_weight": "3500 g",
+  "pw_12_capacity": "12 power banks",
+
+  "pw_24_model": "PW24",
+  "pw_24_dimension": "1820*380*253 mm",
+  "pw_24_weight": "60 kg",
+  "pw_24_capacity": "24 power banks"
 }

@@ -110,4 +110,4 @@ Contact.getInitialProps = async () => ({
   namespacesRequired: ["contact"],
 });
 
-export default withTranslation("contact")(Contact);
+export default withTranslation()(Contact);

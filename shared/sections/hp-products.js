@@ -1,19 +1,31 @@
 import { withTranslation } from "../../i18n";
 import Heading from "shared/heading";
+import Tooltip from "shared/tooltip";
 import { products } from "constants/products";
+import { useBreakpoints } from "hooks/useBreakpoints";
+import Description from "shared/description";
 
-const Products = ({ t, i18n }) => {
+const Products = ({ t }) => {
+  const { desktopMode } = useBreakpoints();
   return (
     <section>
       <div className='container'>
         <Heading text={t("hm_sec1_title")} />
-        <div className='flex justify-around'>
+        <div className='lg:flex lg:justify-around sm:justify-center'>
           {products.map((item, key) => (
             <div
-              className={`flex justify-center items-center opacity-25 hover:opacity-100 transition-opacity duration-500 ${item.classes}`}
+              data-tip='item-tooltip'
+              className={`flex flex-col justify-center items-center lg:opacity-25 xs:opacity-100 hover:opacity-100 transition-opacity duration-500  xs:my-8 lg:my-0`}
               key={key}
             >
-              <img src={item.src} alt={item.alt} className={item.imgClasses} />
+              <img src={item.src} alt={item.alt} className='xs:w-10/12 sm:w-9/12 xl:w-8/12' />
+              {desktopMode ? (
+                <Tooltip item={item} t={t} />
+              ) : (
+                <div className='pt-2 pb-12'>
+                  <Description item={item} t={t} />
+                </div>
+              )}
             </div>
           ))}
         </div>

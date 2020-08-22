@@ -1,7 +1,10 @@
 const { screens } = require("tailwindcss/defaultTheme");
+const breakpoints = require("./constants/breakpoints");
+
 module.exports = {
   purge: ["./shared/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: breakpoints.px,
     container: {
       center: true,
       padding: {
@@ -12,10 +15,11 @@ module.exports = {
         xl: "1600px",
       },
     },
-    screens: {
-      xs: "0px",
-      ...screens,
+    boxShadow: {
+      sm: "0 1px 2px 0 #A2F0F9",
+      "2xl": "0 25px 50px -12px #A2F0F9",
     },
+
     extend: {
       zIndex: {
         "70": "70",
@@ -47,6 +51,7 @@ module.exports = {
         "98px": "98px",
         "150px": "150px",
         "210px": "210px",
+        "260px": "260px",
         "300px": "300px",
         "326px": "326px",
         "760px": "760px",

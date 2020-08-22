@@ -1,13 +1,13 @@
-import React from "react";
-// import ReactDOM from "react-dom";
+import React, { Fragment } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-
-// import 'fullpage.js/vendors/scrolloverflow'; // Optional. When using scrollOverflow:true
+import { useBreakpoints } from "hooks/useBreakpoints";
 
 const FullPage = ({ sections }) => {
-  return (
+  const { desktopMode } = useBreakpoints();
+
+  return desktopMode ? (
     <ReactFullpage
-      navigation
+      navigation={true}
       scrollingSpeed={500}
       render={(comp) => (
         <ReactFullpage.Wrapper>
@@ -19,6 +19,12 @@ const FullPage = ({ sections }) => {
         </ReactFullpage.Wrapper>
       )}
     />
+  ) : (
+    <div className='pt-8'>
+      {sections.map((section, key) => (
+        <div className='py-4 w-full' children={section} />
+      ))}
+    </div>
   );
 };
 

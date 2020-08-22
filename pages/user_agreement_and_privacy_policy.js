@@ -16,4 +16,4 @@ Privacy.getInitialProps = async () => ({
   namespacesRequired: ["common", "sections", "footer"],
 });
 
-export default withTranslation("common")(Privacy);
+export default withTranslation()(Privacy);

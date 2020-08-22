@@ -5,12 +5,15 @@ import Heading from "shared/heading";
 const Plans = ({ t, i18n }) => {
   return (
     <section>
-      <div className='container'>
+      <div className='container w-full'>
         <Heading text={t("hm_sec3_title")} />
-        <div className='flex'>
+        <div className='lg:flex xs:justify-center xs:grid xs:gap-4 lg:gap-6 xs:row-gap-4 lg:grid-cols-0  md:grid-cols-2 xs:grid-cols-1 '>
           {plans.map((item, key) => (
-            <div className={`flex flex-col justify-center items-center  w-300px h-400px mx-2`} key={key}>
-              <div className='flex flex-col justify-center items-center h-200px w-full bg-white'>
+            <div
+              className={`flex flex-col justify-center lg:opacity-25 xs:opacity-100 hover:opacity-100  transition-opacity duration-500 bg-white lg:w-260px xs:w-11/12 mx-auto  h-400px`}
+              key={key}
+            >
+              <div className='flex flex-col justify-center items-center h-200px bg-white'>
                 <img src={item.src} alt={item.alt} className='h-110px' />
                 <p children={t(item.desc_t_key)} className='text-primary-blue my-4 font-bold' />
               </div>

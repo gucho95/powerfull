@@ -1,5 +1,5 @@
 .flicker-4 {
-  animation: flicker-4 2s ease-in-out infinite both;
+  animation: flicker-4 3s ease-in-out both;
 }
 
 .flip-vertical-right {
@@ -63,5 +63,5 @@
 }
 
 .a > div {
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }

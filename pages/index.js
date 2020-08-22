@@ -6,6 +6,7 @@ import Products from "shared/sections/hp-products";
 import HowToUse from "shared/sections/hp-howToUse";
 import Plans from "shared/sections/hp-plans";
 import About from "shared/sections/hp-about";
+import Section1 from "shared/sections/hp-section";
 import { withTranslation } from "../i18n";
 
 const IndexPage = () => {
@@ -24,4 +25,4 @@ IndexPage.getInitialProps = async () => ({
   namespacesRequired: ["common", "header", "footer", "sections"],
 });
 
-export default withTranslation("common")(IndexPage);
+export default withTranslation()(IndexPage);

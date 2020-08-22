@@ -26,4 +26,4 @@ Partners.getInitialProps = async () => ({
   namespacesRequired: ["common", "sections", "footer"],
 });
 
-export default withTranslation("common")(Partners);
+export default withTranslation()(Partners);
