@@ -15,12 +15,14 @@ module.exports = {
         xl: "1600px",
       },
     },
-    boxShadow: {
-      sm: "0 1px 2px 0 #A2F0F9",
-      "2xl": "0 25px 50px -12px #A2F0F9",
-    },
 
     extend: {
+      boxShadow: {
+        block: "0px 15px 10px 0px rgba(13, 12, 13, 0.78)",
+        "block-hover": "0px 15px 11px 0px rgba(13,12,13,0.78)",
+        "3d": `-1px -1px #3e3e3e, -2px -2px #3e3e3e, -3px -3px #3e3e3e, -4px -4px #3e3e3e, -5px -5px #3e3e3e,
+        -6px -6px #3e3e3e, -7px -7px #3e3e3e, -8px -8px #3e3e3e`,
+      },
       zIndex: {
         "70": "70",
         "80": "80",
@@ -60,10 +62,14 @@ module.exports = {
         "primary-dark": "#0F1B1F",
         "primary-light": "#A2F0F9",
         "primary-blue": "#071530",
+        "primary-gray": "#333",
       },
     },
   },
-  variants: {},
+  variants: {
+    height: ["responsive", "group-hover"],
+    backgroundColor: ["responsive", "group-hover"],
+  },
   plugins: [
     function ({ addComponents }) {
       addComponents({

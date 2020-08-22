@@ -41,7 +41,7 @@ const Header = ({ t, i18n }) => {
               <ul className='flex lg:flex-row xs:flex-col xs:items-center'>
                 {menuItems.map((item) => (
                   <li
-                    className={`px-4 lg:mt-0 xs:mt-8 ${menuOpened ? `tracking-in-contract-bck` : ""}`}
+                    className={`px-4 lg:mt-0 xs:mt-8 ${menuOpened ? `tracking-in-contract-bck` : ""} `}
                     key={item.t_key}
                   >
                     <Link href={item.href}>
@@ -55,7 +55,7 @@ const Header = ({ t, i18n }) => {
             <div>
               <ul className='flex xs:text-sm  lg:text-lg justify-center lg:mt-0 xs:mt-4'>
                 {locales.map((item) => (
-                  <li key={item.code}>
+                  <li key={item.code} className={menuOpened ? `tracking-in-contract-bck` : ""}>
                     <button
                       className={`p-2 ${i18n.language === item.code ? "opacity-100" : "opacity-25"}`}
                       onClick={() => i18n.changeLanguage(item.code)}

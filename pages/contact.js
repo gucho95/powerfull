@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
 import Header from "shared/header";
 import Footer from "shared/footer";
-import Heading from "shared/heading";
 import { withTranslation } from "../i18n";
 
 const submitForm = (e) => {
@@ -106,8 +105,4 @@ const Contact = ({ t }) => {
   );
 };
 
-Contact.getInitialProps = async () => ({
-  namespacesRequired: ["contact"],
-});
-
-export default withTranslation()(Contact);
+export default withTranslation("contact")(Contact);

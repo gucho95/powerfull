@@ -20,7 +20,7 @@ const FullPage = ({ sections }) => {
       )}
     />
   ) : (
-    <div className='pt-8'>
+    <div className='pt-12'>
       {sections.map((section, key) => (
         <div className='py-4 w-full' children={section} />
       ))}

@@ -7,10 +7,10 @@ const Plans = ({ t, i18n }) => {
     <section>
       <div className='container w-full'>
         <Heading text={t("hm_sec3_title")} />
-        <div className='lg:flex xs:justify-center xs:grid xs:gap-4 lg:gap-6 xs:row-gap-4 lg:grid-cols-0  md:grid-cols-2 xs:grid-cols-1 '>
+        <div className='lg:flex xs:justify-center xs:grid xs:gap-4 lg:gap-6 xs:row-gap-4 lg:grid-cols-0  md:grid-cols-2 xs:grid-cols-1 transform -skew-y-3 lg:mx-8 xs:mx-0'>
           {plans.map((item, key) => (
             <div
-              className={`flex flex-col justify-center lg:opacity-25 xs:opacity-100 hover:opacity-100  transition-opacity duration-500 bg-white lg:w-260px xs:w-11/12 mx-auto  h-400px`}
+              className={`flex flex-col justify-center  lg:w-260px xs:w-11/12 mx-auto  h-400px  transition-all duration-200 shadow-3d border-2 border-primary-dark transform lg:hover:-translate-y-6 xs:hover:-translate-y-0`}
               key={key}
             >
               <div className='flex flex-col justify-center items-center h-200px bg-white'>
