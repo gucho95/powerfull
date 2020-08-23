@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.17",
+    "@sendgrid/mail": "^7.2.4",
     "next": "latest",
     "next-i18next": "^6.0.2",
     "react": "^16.13.1",
