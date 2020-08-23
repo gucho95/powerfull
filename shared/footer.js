@@ -3,7 +3,8 @@ import LinkTo from "shared/link";
 import { socialPages } from "constants/social";
 import { withTranslation } from "../i18n";
 
-const Footer = ({ t }) => {
+const Footer = ({ t, i18n }) => {
+  const { language } = i18n;
   return (
     <footer className='w-full flex justify-center'>
       <div className='container'>
@@ -44,7 +45,7 @@ const Footer = ({ t }) => {
             {t("company")} {new Date().getFullYear()} &copy;{" "}
           </div>
           <div className='lg:order-2 xs:order-1'>
-            <Link href='user_agreement_and_privacy_policy'>
+            <Link href={`/${language}/user_agreement_and_privacy_policy`}>
               <a>{t("privacy_policy")}</a>
             </Link>
           </div>

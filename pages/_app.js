@@ -40,9 +40,7 @@ function MyApp({ Component, pageProps }) {
         <meta name='msapplication-TileImage' content='/assets/favicon/ms-icon-144x144.png' />
         <meta name='theme-color' content='#0F1B1F' />
       </Head>
-      <div className='flicker-4'>
-        <Component {...pageProps} />
-      </div>
+      <Component {...pageProps} />
     </div>
   );
 }

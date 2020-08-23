@@ -13,7 +13,10 @@ const Header = ({ t, i18n }) => {
       <div className='container'>
         <nav className='flex items-center justify-between flex-wrap p-6 w-full'>
           <div className='flex items-center flex-shrink-0 text-white mr-6'>
-            <LinkTo.Internal href='/' children={<img src={"/assets/logo.png"} className='md:w-40  xs:w-32 ' />} />
+            <LinkTo.Internal
+              href={`/${i18n.language}`}
+              children={<img src={"/assets/logo.png"} className='md:w-40  xs:w-32 ' />}
+            />
           </div>
 
           <div className='block lg:hidden'>
@@ -39,7 +42,7 @@ const Header = ({ t, i18n }) => {
 
             <div className='text-sm lg:flex-grow lg:px-0 xs:px-2 '>
               <ul className='flex lg:flex-row xs:flex-col xs:items-center'>
-                {menuItems.map((item) => (
+                {menuItems(i18n.language).map((item) => (
                   <li
                     className={`px-4 lg:mt-0 xs:mt-8 ${menuOpened ? `tracking-in-contract-bck` : ""} `}
                     key={item.t_key}
