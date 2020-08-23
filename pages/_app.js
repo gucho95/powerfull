@@ -15,6 +15,14 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta property='og:url' content='http://www.powerfull.am' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='Powerfull - We make Armenia Powerfull' />
+        <meta
+          property='og:description'
+          content='Powerfull is a power bank sharing system which operates in Yerevan with around 50 stations located in different parts of the city. It works with its own App, available both in App Store and in Play market. The whole process of using the App as well as the terms and the conditions are showcased in the App.'
+        />
+        <meta property='og:image' content='/assets/logo_og.png' />
       </Head>
       <div className='flicker-4'>
         <Component {...pageProps} />
