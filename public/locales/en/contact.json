@@ -6,5 +6,6 @@
   "submit": "Submit",
   "username_ph": "Put your username",
   "email_ph": "Example@gmail.com",
-  "message_ph": "Text Subject"
+  "message_ph": "Text Subject",
+  "success": "Message successfully sent"
 }

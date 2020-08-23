@@ -7,13 +7,15 @@ import HowToUse from "shared/sections/hp-howToUse";
 import Plans from "shared/sections/hp-plans";
 import About from "shared/sections/hp-about";
 import { withTranslation } from "../../i18n";
+import Loader from "shared/loader";
 
-const IndexPage = () => {
+const IndexPage = ({ t }) => {
   return (
     <div>
       <Head>
         <title>Powerfull | Homepage</title>
       </Head>
+      {/* <Loader t={t} /> */}
       <Header />
       <FullPage sections={[<Products />, <HowToUse />, <Plans />, <About />]} />
     </div>

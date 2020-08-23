@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Router from "next/router";
 import i18nConfig from "../i18n";
+import Loader from "shared/loader";
 
 const {
   config: { defaultLanguage },

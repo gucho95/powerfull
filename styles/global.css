@@ -2,28 +2,6 @@
   animation: flicker-4 3s ease-in-out both;
 }
 
-.flip-vertical-right {
-  animation: flip-vertical-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-.focus-in-expand {
-  animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-.tracking-in-contract-bck {
-  animation: tracking-in-contract-bck 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-
-.tracking-out-expand {
-  animation: tracking-out-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-.text-flicker-in-glow {
-  animation: text-flicker-in-glow 0.5s ease-in-out both;
-}
-
-.text-focus-in {
-  animation: text-focus-in 0.5s linear both;
-}
-
 .scene {
   perspective: 760px;
 }

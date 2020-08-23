@@ -4,10 +4,8 @@ import Head from "next/head";
 import "../styles/index.css";
 import "../styles/global.css";
 import "../styles/animations/glow.css";
-import "../styles/animations/focus.css";
 import "../styles/animations/tracking.css";
-import "../styles/animations/shadow-pop.css";
-import "../styles/carousel.css";
+import "../styles/animations/tilt.css";
 import "swiper/swiper-bundle.css";
 
 function MyApp({ Component, pageProps }) {

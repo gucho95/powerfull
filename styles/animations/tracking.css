@@ -20,15 +20,6 @@
   }
 }
 
-@keyframes tracking-out-expand {
-  0% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0.8;
-  }
-  100% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
+.tracking-in-contract-bck {
+  animation: tracking-in-contract-bck 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }

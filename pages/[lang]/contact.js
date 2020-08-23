@@ -1,29 +1,35 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Header from "shared/header";
 import Footer from "shared/footer";
+import Alert from "shared/alert";
 import { withTranslation } from "../../i18n";
 
-const submitForm = async (e) => {
+const submitForm = async (e, setSubmited) => {
   e.preventDefault();
   const form = document.querySelector("form");
+
   const payload = {
     firstName: form.elements.item(0).value,
     email: form.elements.item(1).value,
     message: form.elements.item(2).value,
   };
+
   const response = await fetch("/api/send-email", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
+
   if (response.status === 200) {
-    alert("email send");
+    setSubmited(true);
+    setTimeout(() => setSubmited(false), 7000);
     form.reset();
   }
 };
 
 const Contact = ({ t }) => {
+  const [submited, setSubmited] = useState(false);
   useEffect(() => {
     const card = document.querySelector(".card");
     setTimeout(() => {
@@ -39,28 +45,7 @@ const Contact = ({ t }) => {
         <title>Powerfull | Contact</title>
       </Head>
       <Header />
-      <div className='w-full absolute z-200 bottom-0 left-0 flex justify-end'>
-        <div
-          class='bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md w-3/12 mb-12 mr-12 '
-          role='alert'
-        >
-          <div class='flex'>
-            <div class='py-1'>
-              <svg
-                class='fill-current h-6 w-6 text-teal-500 mr-4'
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 20 20'
-              >
-                <path d='M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z' />
-              </svg>
-            </div>
-            <div>
-              <p class='font-bold'>Our privacy policy has changed</p>
-              <p class='text-sm'>Make sure you know how these changes affect you.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div className='flex flex-col items-center'>
         <div className='lg-sm:h-110px xs:h-4' />
         <div className='container py-32  h-auto  overflow-hidden'>
@@ -94,7 +79,10 @@ const Contact = ({ t }) => {
                       <span className='border-primary-dark border-b-2 pb-2'>{t("contact_us")}</span>
                     </h2>
 
-                    <form className='lg-sm:mt-29px xs:mt-8 xs:ml-5 lg-sm:ml-0  ' onSubmit={submitForm}>
+                    <form
+                      className='lg-sm:mt-29px xs:mt-8 xs:ml-5 lg-sm:ml-0  '
+                      onSubmit={(event) => submitForm(event, setSubmited)}
+                    >
                       <div className='flex xs:flex-col lg-sm:flex-row  '>
                         <label className='lg-sm:w-3/12 xs:w-full text-black lg-sm:text-center xs:text-left xs:mt-4 xs:mb-2 lg-sm:mt-0 '>
                           {t("name_surname")}
@@ -131,7 +119,7 @@ const Contact = ({ t }) => {
                         />
                       </div>
 
-                      <div className='flex lg-sm:mt-4 xs:mt-6'>
+                      <div className='flex lg-sm:mt-2 xs:mt-6'>
                         <button
                           className='w-98px h-40px m-auto bg-white text-black  hover:bg-primary-light transition-all duration-500 '
                           children={t("submit")}
@@ -146,6 +134,7 @@ const Contact = ({ t }) => {
         </div>
       </div>
       <Footer />
+      {submited ? <Alert t={t} /> : null}
     </div>
   );
 };
