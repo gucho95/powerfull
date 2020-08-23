@@ -1,28 +1,15 @@
-import Head from "next/head";
-import Header from "shared/header";
-import FullPage from "shared/fullPage";
-// full page sections
-import Products from "shared/sections/hp-products";
-import HowToUse from "shared/sections/hp-howToUse";
-import Plans from "shared/sections/hp-plans";
-import About from "shared/sections/hp-about";
-import Section1 from "shared/sections/hp-section";
-import { withTranslation } from "../i18n";
+import { useEffect } from "react";
+import Router from "next/router";
 
-const IndexPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Powerfull | Homepage</title>
-      </Head>
-      <Header />
-      <FullPage sections={[<Products />, <HowToUse />, <Plans />, <About />]} />
-    </div>
-  );
-};
+import i18nConfig from "../i18n";
 
-IndexPage.getInitialProps = async () => ({
-  namespacesRequired: ["common", "header", "footer", "sections"],
-});
+const { defaultLanguage } = i18nConfig;
 
-export default withTranslation()(IndexPage);
+export default function Index() {
+  console.log(defaultLanguage);
+  useEffect(() => {
+    Router.replace(`/${defaultLanguage}`);
+  }, []);
+
+  return null;
+}

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Head from "next/head";
 import Header from "shared/header";
 import Footer from "shared/footer";
-import { withTranslation } from "../i18n";
+import { withTranslation } from "../../i18n";
 
 const submitForm = (e) => {
   e.preventDefault();

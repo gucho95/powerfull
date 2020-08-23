@@ -2,7 +2,7 @@ import Head from "next/head";
 import Header from "shared/header";
 import Footer from "shared/footer";
 import FullPage from "shared/fullPage";
-import { withTranslation } from "../i18n";
+import { withTranslation } from "../../i18n";
 // full page sections
 import BecomePartner from "shared/sections/pt-becomePartner";
 import WeOffer from "shared/sections/pt-weOffer";
