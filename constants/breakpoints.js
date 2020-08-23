@@ -1,4 +1,4 @@
-const breakpoints = { xs: "0px", sm: "640px", md: "768px", lg: "1024px", xl: "1200px" };
+const breakpoints = { xs: "0px", sm: "640px", md: "768px", "lg-sm": "865px", lg: "1024px", xl: "1200px" };
 
 const formatBreakpoints = (screens) => {
   let breakpointsNum = {};

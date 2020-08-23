@@ -8,4 +8,5 @@ module.exports = new NextI18Next({
     en: "en",
   },
   localePath: path.resolve("./public/locales"),
+  shallowRender: true,
 });
