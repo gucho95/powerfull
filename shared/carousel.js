@@ -1,17 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { partners } from "constants/partners";
-// import Swiper JS
-import Swiper from "swiper";
+import { products_for_partners } from "constants/products";
+import Swiper, { Pagination } from "swiper";
 
-const Carousel = () => {
+const With4Slides = () => {
   useEffect(() => {
+    Swiper.use([]);
     new Swiper(".swiper-container", {
       slidesPerView: 4.5,
       spaceBetween: 16,
       grabCursor: true,
-      autoplay: {
-        delay: 1000,
-      },
+      loop: true,
     });
   }, []);
 
@@ -31,4 +30,42 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+const With1Slide = ({ t }) => {
+  useEffect(() => {
+    Swiper.use([Pagination]);
+    new Swiper(".we-offer-container", {
+      slidesPerView: 1,
+      grabCursor: true,
+      spaceBetween: 16,
+      preventInteractionOnTransition: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  }, []);
+
+  return (
+    <div className='we-offer-container  overflow-hidden'>
+      <div className='swiper-wrapper'>
+        {products_for_partners.map((item, key) => (
+          <div className='swiper-slide w-full flex-col  justify-between items-center ' key={item.src}>
+            <img src={item.src} alt={item.alt} className='h-30vh max-w-full w-auto m-auto object-contain' />
+            <div className=' text-sm text-center pt-2'>
+              <p className=' text-primary-light text-sm font-bold'>{`${t("model")} - ${t(item.model)}`}</p>
+              <p className=' text-primary-light text-xs font-bold'>{`${t("dimension")} - ${t(item.dimension)}`}</p>
+              <p className=' text-primary-light text-xs font-bold'>{`${t("weight")} - ${t(item.weight)}`}</p>
+              <p className=' text-primary-light text-xs font-bold'>{`${t("capacity")} - ${t(item.capacity)}`}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className='swiper-pagination h-8 static mt-8'></div>
+    </div>
+  );
+};
+
+export default {
+  With4Slides,
+  With1Slide,
+};

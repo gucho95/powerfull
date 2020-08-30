@@ -4,6 +4,7 @@ import Header from "shared/header";
 import Footer from "shared/footer";
 import Alert from "shared/alert";
 import { withTranslation } from "../../i18n";
+import Loader from "shared/loader";
 
 const submitForm = async (e, setSubmited) => {
   e.preventDefault();
@@ -45,7 +46,7 @@ const Contact = ({ t }) => {
         <title>Powerfull | Contact</title>
       </Head>
       <Header />
-
+      <Loader />
       <div className='flex flex-col items-center'>
         <div className='lg-sm:h-110px xs:h-4' />
         <div className='container py-32  h-auto  overflow-hidden'>
@@ -139,4 +140,8 @@ const Contact = ({ t }) => {
   );
 };
 
-export default withTranslation("contact")(Contact);
+Contact.getInitialProps = async () => ({
+  namespacesRequired: ["contact_us"],
+});
+
+export default withTranslation("contact_us")(Contact);

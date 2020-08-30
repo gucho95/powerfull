@@ -1,15 +1,31 @@
 @tailwind base;
 
+@font-face {
+  font-family: "Oswald";
+  src: url("/fonts/oswald.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   @apply bg-primary-dark text-primary-light;
   min-width: 320px;
   overflow-x: hidden;
+  /* font-family: Oswald; */
 }
 
 .section > div {
   height: calc(100vh - 110px) !important;
   display: flex;
   margin-top: 110px;
+}
+
+.swiper-pagination > .swiper-pagination-bullet {
+  @apply bg-primary-light opacity-25;
+}
+.swiper-pagination > .swiper-pagination-bullet-active {
+  @apply bg-primary-light opacity-100;
 }
 
 /*Overrides must match specificity of pre-loaded styles!*/
@@ -25,13 +41,20 @@ body {
   transition: all 0.5s linear;
 }
 
-.container {
-}
-
 @tailwind components;
+
 @tailwind utilities;
 .shadow-block {
   -webkit-box-shadow: 0px 15px 10px 0px rgba(13, 12, 13, 0.78);
   -moz-box-shadow: 0px 15px 10px 0px rgba(13, 12, 13, 0.78);
   box-shadow: 0px 15px 10px 0px rgba(13, 12, 13, 0.78);
+}
+
+.mobile-background-img {
+  height: calc(100vh - 300px);
+  width: auto;
+}
+
+.a > * {
+  border: 1px solid red;
 }

@@ -1,4 +1,5 @@
 {
+  "loader_text": "Your phone needs a charge?",
   "hm_sec1_title": "We make Armenia Powerfull",
   "hm_sec1_desc": "Currently at more than 50 points in Yerevan",
   "hm_sec2_title": "How to use Powerfull",
@@ -11,6 +12,11 @@
   "charge_device_desc": "Feel free to charge your device as much as you wish. Our power bank capacity is enough for fully charging any device. Please, check the terms and the conditions of usage of power banks in the application relevant section.",
   "return_anywhere": "Return anywhere",
   "return_anywhere_desc": "You don’t need to stay around the station to put it back. Go wherever you want, find another station with free slots on our map and put it back.",
+  "start_plan": "Start",
+  "standart_plan": "Standart",
+  "minute_fee__plan": "Minute fee",
+  "daily_fee__plan": "Daily fee",
+
   "f_5": "First 5 min",
   "f_30": "First 30 min",
   "min_fee": "Minute fee",

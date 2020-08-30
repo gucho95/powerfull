@@ -13,9 +13,9 @@ const IndexPage = ({ t }) => {
   return (
     <div>
       <Head>
-        <title>Powerfull | Homepage</title>
+        <title>Powerfull | We make Armenia Powerfull</title>
       </Head>
-      {/* <Loader t={t} /> */}
+      <Loader />
       <Header />
       <FullPage sections={[<Products />, <HowToUse />, <Plans />, <About />]} />
     </div>
@@ -23,7 +23,7 @@ const IndexPage = ({ t }) => {
 };
 
 IndexPage.getInitialProps = async () => ({
-  namespacesRequired: ["common", "header", "footer", "sections"],
+  namespacesRequired: ["header", "footer", "sections"],
 });
 
-export default withTranslation()(IndexPage);
+export default withTranslation("sections")(IndexPage);

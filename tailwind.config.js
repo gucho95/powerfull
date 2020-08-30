@@ -23,12 +23,23 @@ module.exports = {
         "3d": `-1px -1px #3e3e3e, -2px -2px #3e3e3e, -3px -3px #3e3e3e, -4px -4px #3e3e3e, -5px -5px #3e3e3e,
         -6px -6px #3e3e3e, -7px -7px #3e3e3e, -8px -8px #3e3e3e`,
       },
+      inset: {
+        "18px": "18px",
+        2: "2rem",
+        4: "4rem",
+        6: "6rem",
+        8: "8rem",
+      },
       zIndex: {
-        "70": "70",
-        "80": "80",
-        "90": "90",
-        "100": "100",
-        "200": "200",
+        70: "70",
+        80: "80",
+        90: "90",
+        100: "100",
+        200: "200",
+        300: "300",
+        400: "400",
+        500: "500",
+        600: "600",
       },
       margin: {
         "6px": "6px",
@@ -43,6 +54,7 @@ module.exports = {
         "200px": "200px",
       },
       height: {
+        "0.5px": "0.5px",
         "30px": "30px",
         "38px": "38px",
         "40px": "40px",
@@ -53,6 +65,11 @@ module.exports = {
         "384px": "384px",
         "400px": "400px",
         "590px": "590px",
+        "30vh": "30vh",
+        "40vh": "40vh",
+        "50vh": "50vh",
+        "60vh": "60vh",
+        "70vh": "70vh",
       },
       width: {
         "98px": "98px",
@@ -73,8 +90,10 @@ module.exports = {
     },
   },
   variants: {
+    scale: ["responsive", "group-hover"],
     height: ["responsive", "group-hover"],
     backgroundColor: ["responsive", "group-hover"],
+    border: ["active", "focus", "focus-within"],
   },
   plugins: [
     function ({ addComponents }) {

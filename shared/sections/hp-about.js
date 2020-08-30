@@ -20,7 +20,7 @@ const About = ({ t, i18n }) => {
               <img src='/assets/download/app_store.png' className='lg:w-32 xs:w-24' />
             </a>
           </div>
-          <p className='font-bold text-primary-light text-justify mt-16 mb-16 px-4'>{t("hm_sec4_desc")}</p>
+          <p className='font-bold text-primary-light text-center mt-16 mb-16 px-4'>{t("hm_sec4_desc")}</p>
         </div>
       </section>
       <Footer />

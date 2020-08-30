@@ -16,7 +16,7 @@ const Privacy = ({ t, i18n }) => {
   return (
     <div className='bg-white'>
       <Head>
-        <title>Powerfull | Homepage</title>
+        <title>Powerfull | User Agrement </title>
       </Head>
       <Component />
     </div>
