@@ -1,4 +1,3 @@
-import { useTranslation } from "../../i18n";
 import { points } from "constants/howToUse";
 import Heading from "shared/heading";
 import { withTranslation } from "../../i18n";

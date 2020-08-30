@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { useBreakpoints } from "hooks/useBreakpoints";
 

@@ -1,18 +1,9 @@
 @tailwind base;
 
-@font-face {
-  font-family: "Oswald";
-  src: url("/fonts/oswald.ttf");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
   @apply bg-primary-dark text-primary-light;
   min-width: 320px;
   overflow-x: hidden;
-  /* font-family: Oswald; */
 }
 
 .section > div {
@@ -53,8 +44,4 @@ body {
 .mobile-background-img {
   height: calc(100vh - 300px);
   width: auto;
-}
-
-.a > * {
-  border: 1px solid red;
 }

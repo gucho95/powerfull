@@ -1,5 +1,4 @@
 import { withTranslation } from "../../i18n";
-import Heading from "shared/heading";
 import { points } from "constants/howToBecomePartner";
 
 const HowToBecomePartner = ({ t, i18n }) => {
