@@ -14,7 +14,7 @@ const Tooltip = ({ item, t }) => (
     }}
   >
     <Description item={item} t={t} />
-    <div className='absolute bottom-18px left-0 bg-primary-light w-4/12 h-1 transform translate-x-20 translate-y-16 rotate-45' />
+    <div className='absolute bottom-18px left-0 bg-white w-4/12 h-0.5px transform translate-x-20 translate-y-16 rotate-45' />
   </ReactTooltip>
 );
 

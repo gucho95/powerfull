@@ -24,13 +24,13 @@ const Header = ({ t, i18n }) => {
     </div>
   );
   return (
-    <header className='flex justify-center fixed z-40 w-full bg-primary-dark shadow-xl'>
+    <header className='flex justify-center fixed z-40 w-full bg-primary-dark shadow-xl border-primary-gray-1 border-b-2'>
       <div className='container'>
         <nav className=' items-center justify-between flex-wrap p-6 w-full lg:grid lg:grid-cols-3 xs:flex xs:justify-between'>
           <div className='flex items-center flex-shrink-0 text-white mr-6 '>
             <LinkTo.Internal
               href={`/${i18n.language}`}
-              children={<img src={"/assets/logo.png"} className='md:w-40  xs:w-32 ' />}
+              children={<img src={"/assets/logo.png"} className='lg:w-40  xs:w-32 ' />}
             />
           </div>
           {desktopMode ? <Menu /> : null}

@@ -22,7 +22,7 @@ const Plans = ({ t, i18n }) => {
                   <p children={t(item.desc_t_key)} className='text-primary-blue my-4 font-bold' />
                 </div>
                 <div className='flex justify-center items-center bg-primary-blue h-200px  font-bold text-sm w-full'>
-                  <h3 children={`${item.price} ${t("amd")}`} className='font-bold text-2xl  text-white' />
+                  <h3 children={`${item.price} ${t("amd")}`} className=' text-2xl font-bold  text-white' />
                 </div>
               </div>
             ))}

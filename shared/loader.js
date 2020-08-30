@@ -11,7 +11,7 @@ const Loader = ({ t }) => {
   return visible ? (
     <div className='h-screen w-screen fixed z-200 overflow-hidden flex justify-center  items-center flex-col bg-primary-dark opacity-100 px-16'>
       <img src='/assets/battery.png' className='max-w-full' />
-      <h2 className='md:text-3xl xs:text-lg mt-8 text-center font-black' children={t("loader_text")} />
+      <h2 className='md:text-3xl xs:text-lg mt-8 text-center font-black text-white' children={t("loader_text")} />
     </div>
   ) : null;
 };

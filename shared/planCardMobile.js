@@ -10,7 +10,10 @@ const PlanCardMobile = ({ t, item }) => {
         </div>
         <div className='w-8/12 '>
           <div>
-            <p children={t(item.desc_t_key)} className='text-primary-blue sm:my-4 xs:my-1 font-bold text-left ' />
+            <p
+              children={t(item.mob_desc_t_key)}
+              className='text-primary-blue sm:my-4 xs:my-1 font-bold text-left text-xl '
+            />
           </div>
           <div>
             <h3

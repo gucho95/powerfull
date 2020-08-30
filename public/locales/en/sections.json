@@ -17,6 +17,11 @@
   "minute_fee__plan": "Minute fee",
   "daily_fee__plan": "Daily fee",
 
+  "mob_f_5": "First 5 min",
+  "mob_f_30": "First 30 min",
+  "mob_min_fee": "For 1 minute",
+  "mob_daily_fee": "For 1 day",
+
   "f_5": "First 5 min",
   "f_30": "First 30 min",
   "min_fee": "Minute fee",
