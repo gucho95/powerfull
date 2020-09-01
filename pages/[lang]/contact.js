@@ -134,7 +134,9 @@ const Contact = ({ t }) => {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className='py-4'>
+        <Footer />
+      </div>
       {submited ? <Alert t={t} /> : null}
     </div>
   );

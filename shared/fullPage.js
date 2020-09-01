@@ -13,16 +13,19 @@ const FullPage = ({ sections }) => {
         <ReactFullpage.Wrapper>
           {sections.map((section, key) => (
             <div className='section' key={key}>
-              <div className='flex flex-col justify-center items-center py-4 w-full' children={section} />
+              <div
+                className='container flex flex-col justify-center items-center py-4 w-full h-full a'
+                children={section}
+              />
             </div>
           ))}
         </ReactFullpage.Wrapper>
       )}
     />
   ) : (
-    <div className='pt-12'>
+    <div className='pt-32 px-2'>
       {sections.map((section, key) => (
-        <div className='lg:py-4 xs:py-0 w-full' children={section} key={key} />
+        <div className='w-full a' children={section} key={key} />
       ))}
     </div>
   );

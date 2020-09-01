@@ -12,10 +12,10 @@ import Loader from "shared/loader";
 const IndexPage = ({ t }) => {
   return (
     <div>
+      <Loader />
       <Head>
         <title>Powerfull | We make Armenia Powerfull</title>
       </Head>
-      <Loader />
       <Header />
       <FullPage sections={[<Products />, <HowToUse />, <Plans />, <About />]} />
     </div>

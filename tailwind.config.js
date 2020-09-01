@@ -4,7 +4,12 @@ const breakpoints = require("./constants/breakpoints");
 module.exports = {
   purge: ["./shared/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    screens: breakpoints.px,
+    screens: {
+      ...breakpoints.px,
+      "h-sm": { raw: "(min-height: 0px) and (max-height: 767px) and (min-width: 1024px)" },
+      "h-md": { raw: "(min-height: 650px) and (max-height: 768px) and (min-width: 1024px)" },
+    },
+    // => @media (max-height: 1234px) { ... }},
     container: {
       center: true,
       padding: {

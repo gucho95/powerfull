@@ -6,8 +6,8 @@ import { withTranslation } from "../i18n";
 const Footer = ({ t, i18n }) => {
   const { language } = i18n;
   return (
-    <footer className='w-full flex justify-center border-t-2 border-primary-light py-4'>
-      <div className='container'>
+    <footer className='w-full border-t-2 border-primary-light'>
+      <div className='container flex flex-col'>
         <div className='lg:flex lg:flex-row lg:justify-around xs:items-center  xs:flex-col'>
           <div className='flex items-center xs:justify-center'>
             <div>
@@ -39,7 +39,7 @@ const Footer = ({ t, i18n }) => {
           </div>
         </div>
 
-        <div className='grid lg:grid-cols-3 xs:grid-cols-1 text-center items-center lg:my-10 xs:my-8'>
+        <div className='grid lg:grid-cols-3 xs:grid-cols-1 text-center items-center '>
           <div></div>
           <div className='lg:order-1 xs:order-2 xs:mt-2'>
             {t("company")} {new Date().getFullYear()} &copy;{" "}

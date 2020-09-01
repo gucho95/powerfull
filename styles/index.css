@@ -32,6 +32,11 @@ body {
   transition: all 0.5s linear;
 }
 
+div.__react_component_tooltip {
+  border-color: transparent !important;
+  z-index: 900000 !important;
+}
+
 @tailwind components;
 
 @tailwind utilities;
@@ -46,6 +51,6 @@ body {
   width: auto;
 }
 
-.a > div {
-  border: 1px solid red;
+.a > * {
+  /* border: 0.5px inset lightgray !important; */
 }
