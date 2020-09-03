@@ -7,6 +7,12 @@ const FullPage = ({ sections }) => {
 
   return desktopMode ? (
     <ReactFullpage
+      onLeave={() => {
+        const header = document.getElementsByTagName("header")[0];
+        if (header) {
+          header.style.zIndex = 100;
+        }
+      }}
       navigation={true}
       scrollingSpeed={500}
       render={(comp) => (

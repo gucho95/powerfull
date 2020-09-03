@@ -46,12 +46,28 @@ const Products = ({ t }) => {
       </div>
 
       <ReactTooltip
+        event='mouseenter'
+        eventOff='mouseleave'
+        globalEventOff='scroll'
+        scrollHide={true}
+        afterShow={() => {
+          const header = document.getElementsByTagName("header")[0];
+          if (header) {
+            header.style.zIndex = 0;
+          }
+        }}
+        afterHide={() => {
+          const header = document.getElementsByTagName("header")[0];
+          if (header) {
+            header.style.zIndex = 100;
+          }
+        }}
         getContent={(i) => i !== null && <Tooltip item={products[i]} t={t} />}
         arrowColor='transparent'
         backgroundColor='black'
         border={false}
         effect='solid'
-        delayShow='100'
+        delayShow={100}
         overridePosition={({ left, top }, currentEvent, currentTarget, node, place, desiredPlace, effect, offset) => {
           const rect = currentTarget.getBoundingClientRect();
           return {
