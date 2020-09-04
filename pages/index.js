@@ -9,7 +9,7 @@ const {
 export default function Index() {
   useEffect(() => {
     Router.replace(`/${defaultLanguage}`);
-    onsole.log = console.warn = console.error = () => {};
+    console.log = console.warn = console.error = () => {};
   }, []);
   return null;
 }
