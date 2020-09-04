@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Internal = ({ href, target, children }) => (
-  <Link href={href} as={href}>
+  <Link href={href}>
     <a target={target} children={children} />
   </Link>
 );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "../i18n";
+import Link from "next/link";
 import LinkTo from "shared/link";
 import { withTranslation } from "../i18n";
 import { menuItems } from "constants/navbar";
@@ -15,7 +15,7 @@ const Header = ({ t, i18n }) => {
       <ul className='flex lg:flex-row xs:flex-col xs:items-center justify-center'>
         {menuItems(i18n.language).map((item) => (
           <li className={`px-4 lg:mt-0 xs:mt-8 ${menuOpened ? `tracking-in-contract-bck` : ""} `} key={item.t_key}>
-            <Link href={item.href}>
+            <Link href={`/${i18n.language}${item.href}`}>
               <a children={t(item.t_key)} className='text-xl hover:text-white' />
             </Link>
           </li>
