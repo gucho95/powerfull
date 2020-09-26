@@ -39,6 +39,7 @@ function MyApp({ Component, pageProps }) {
         <meta name='msapplication-TileColor' content='#ffffff' />
         <meta name='msapplication-TileImage' content='/assets/favicon/ms-icon-144x144.png' />
         <meta name='theme-color' content='#ffffff' />
+        <meta name='yandex-verification' content='9e0b4ebb47b62b64' />
       </Head>
 
       <Component {...pageProps} />
