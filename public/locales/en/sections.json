@@ -16,12 +16,10 @@
   "standart_plan": "Standart",
   "minute_fee__plan": "Minute fee",
   "daily_fee__plan": "Daily fee",
-
   "mob_f_5": "First 5 min",
   "mob_f_30": "First 30 min",
   "mob_min_fee": "For 1 minute",
   "mob_daily_fee": "For 1 day",
-
   "f_5": "First 5 min",
   "f_30": "First 30 min",
   "min_fee": "Minute fee",
@@ -32,7 +30,7 @@
   "pt_sec1_title": "Become our partner",
   "pt_sec1_desc": "Be a part of the most viral developing share economy idea",
   "pt_sec2_title": "We offer and provide",
-  "pt_sec2_desc": "To become our partner call us +374 98 722218 or write us support@powerfull.am",
+  "pt_sec2_desc": "To become our partner call us +374 44 970055 or write us support@powerfull.am",
   "pt_sec3_1_title": "How to become a partner?",
   "pt_sec3_1_desc": "Just call or write us and we will come to your place and organize everything. You don’t need to pay anything, it’s all free for you.",
   "pt_sec3_2_title": "Do you have a great idea?",
@@ -42,28 +40,23 @@
   "pt_sec3_4_title": "Innovate your business",
   "pt_sec3_4_desc": "Jump on the worldwide innovation channel by joining our network and stand out among your competitors with your innovative solutions.",
   "pt_sec4_title": "Our partners",
-  "pt_sec4_desc": "Call us +374 98 722218 or write us support@powerfull.am to become our partner",
-
+  "pt_sec4_desc": "Call us +374 44 970055 or write us support@powerfull.am to become our partner",
   "model": "Model",
   "dimension": "Dimensions",
   "weight": "Weight",
   "capacity": "Capacity",
-
   "pw_01_model": "  Powerfull bank",
   "pw_01_dimension": "139*69*13.5 mm",
   "pw_01_weight": "100 g",
   "pw_01_capacity": "5000 mAh",
-
   "pw_09_model": "PW09",
   "pw_09_dimension": "310*164*138 mm",
   "pw_09_weight": "3500 g",
   "pw_09_capacity": "9 power banks",
-
   "pw_12_model": "PW12",
   "pw_12_dimension": "300*260*170 mm",
   "pw_12_weight": "3500 g",
   "pw_12_capacity": "12 power banks",
-
   "pw_24_model": "PW24",
   "pw_24_dimension": "1820*380*253 mm",
   "pw_24_weight": "60 kg",

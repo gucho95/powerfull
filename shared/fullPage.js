@@ -1,12 +1,14 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { useBreakpoints } from "hooks/useBreakpoints";
+const { NEXT_PUBLIC_FULL_PAGE_JS_KEY } = process.env;
 
 const FullPage = ({ sections }) => {
   const { desktopMode } = useBreakpoints();
 
   return desktopMode ? (
     <ReactFullpage
+      licenseKey={NEXT_PUBLIC_FULL_PAGE_JS_KEY}
       onLeave={() => {
         const header = document.getElementsByTagName("header")[0];
         if (header) {
@@ -29,12 +31,12 @@ const FullPage = ({ sections }) => {
       )}
     />
   ) : (
-    <div className='pt-32 px-2'>
-      {sections.map((section, key) => (
-        <div className='w-full a' children={section} key={key} />
-      ))}
-    </div>
-  );
+      <div className='pt-32 px-2'>
+        {sections.map((section, key) => (
+          <div className='w-full a' children={section} key={key} />
+        ))}
+      </div>
+    );
 };
 
 export default FullPage;

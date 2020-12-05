@@ -14,8 +14,7 @@ const Footer = ({ t, i18n }) => {
               <img src='/assets/contact/phone.png' alt='' className='w-16 xs:w-12' />
             </div>
             <div className='flex flex-col ml-4 xs:w-40'>
-              <a href='tel:+37498722218' children='+374 98 722218' className='font-bold' />
-              <a href='tel:+37498722218' children='+374 93 505229' className='my-1 font-bold' />
+              <a href='tel:+37498722218' children='+374 44 970055' className='font-bold' />
             </div>
           </div>
 
